@@ -1,4 +1,4 @@
-package meow.springframe.petclinic.model;
+package meow.springframework.petclinic.model;
 
 import java.time.LocalDate;
 
