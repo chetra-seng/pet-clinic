@@ -1,7 +1,7 @@
 # Read Me First
 The following was discovered as part of building this project:
 
-* The original package name 'meow.springframe.pet-clinic' is invalid and this project uses 'meow.springframe.petclinic' instead.
+* The original package name 'meow.springframe.pet-clinic' is invalid and this project uses 'meow.springframe.meow.springframework.petclinic' instead.
 
 # Getting Started
 

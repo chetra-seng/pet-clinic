@@ -1,4 +1,4 @@
-package petclinic;
+package meow.springframework.petclinic;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
