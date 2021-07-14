@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
     <modules>
@@ -11,11 +10,11 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.5.2</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>meow.springframe</groupId>
 	<artifactId>pet-clinic</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>pet-clinic</name>
 	<description>Pet Clinic Spring Framework Application</description>
 	<properties>
@@ -40,6 +39,7 @@
 
 	<scm>
 		<developerConnection>scm:git:git@github.com:chetra-seng/pet-clinic.git</developerConnection>
-	</scm>
+	  <tag>pet-clinic-0.0.1</tag>
+  </scm>
 
 </project>
