@@ -3,9 +3,11 @@ package meow.springframework.petclinic.services.map;
 import meow.springframework.petclinic.model.Vet;
 import meow.springframework.petclinic.services.CrudService;
 import meow.springframework.petclinic.services.VetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class VetMapService extends AbstractMapService<Vet, Long> implements VetService {
     @Override
     public Set<Vet> findAll(){

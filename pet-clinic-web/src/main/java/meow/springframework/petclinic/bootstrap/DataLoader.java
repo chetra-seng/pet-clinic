@@ -4,8 +4,6 @@ import meow.springframework.petclinic.model.Owner;
 import meow.springframework.petclinic.model.Vet;
 import meow.springframework.petclinic.services.OwnerService;
 import meow.springframework.petclinic.services.VetService;
-import meow.springframework.petclinic.services.map.OwnerMapService;
-import meow.springframework.petclinic.services.map.VetMapService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -14,9 +12,9 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader(){
-        ownerService = new OwnerMapService();
-        vetService = new VetMapService();
+    public DataLoader(OwnerService ownerService, VetService vetService){
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override
