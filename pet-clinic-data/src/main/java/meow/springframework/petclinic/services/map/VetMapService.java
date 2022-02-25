@@ -1,6 +1,8 @@
 package meow.springframework.petclinic.services.map;
 
+import meow.springframework.petclinic.model.Specialty;
 import meow.springframework.petclinic.model.Vet;
+import meow.springframework.petclinic.services.SpecialtiesService;
 import meow.springframework.petclinic.services.VetService;
 import org.springframework.stereotype.Service;
 
@@ -8,6 +10,12 @@ import java.util.Set;
 
 @Service
 public class VetMapService extends AbstractMapService<Vet, Long> implements VetService {
+    private final SpecialtiesService specialtiesService;
+
+    public VetMapService(SpecialtiesService specialtyService) {
+        this.specialtiesService = specialtyService;
+    }
+
     @Override
     public Set<Vet> findAll(){
         return super.findAll();
@@ -20,6 +28,14 @@ public class VetMapService extends AbstractMapService<Vet, Long> implements VetS
 
     @Override
     public Vet save(Vet vet){
+        if(vet.getSpecialties().size() > 0){
+            vet.getSpecialties().forEach(specialty -> {
+                if(specialty.getId() == null){
+                    Specialty savedSpecialty = specialtiesService.save(specialty);
+                    specialty.setId(savedSpecialty.getId());
+                }
+            });
+        }
         return super.save(vet);
     }
 
