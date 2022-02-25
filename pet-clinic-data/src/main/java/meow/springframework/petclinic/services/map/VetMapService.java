@@ -1,7 +1,6 @@
 package meow.springframework.petclinic.services.map;
 
 import meow.springframework.petclinic.model.Vet;
-import meow.springframework.petclinic.services.CrudService;
 import meow.springframework.petclinic.services.VetService;
 import org.springframework.stereotype.Service;
 
