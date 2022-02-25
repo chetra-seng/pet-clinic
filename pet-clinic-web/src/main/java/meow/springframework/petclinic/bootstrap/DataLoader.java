@@ -10,6 +10,9 @@ import meow.springframework.petclinic.services.VetService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
+import java.time.LocalDate;
+import java.util.Date;
+
 @Component
 public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
@@ -35,11 +38,31 @@ public class DataLoader implements CommandLineRunner {
         Owner owner1 = new Owner();
         owner1.setFirstName("Chetra");
         owner1.setLastName("Seng");
+        owner1.setCity("Battambang");
+        owner1.setAddress("523 Chamkar Somroang");
+        owner1.setTelephone("092823836");
+
+        Pet chetraPet = new Pet();
+        chetraPet.setPetType(savedDogType);
+        chetraPet.setName("Tony");
+        chetraPet.setBirthDate(LocalDate.now());
+        chetraPet.setOwner(owner1);
+        owner1.getPets().add(chetraPet);
         ownerService.save(owner1);
 
         Owner owner2 = new Owner();
         owner2.setFirstName("Sreykin");
         owner2.setLastName("Seng");
+        owner2.setCity("Batambang");
+        owner2.setTelephone("012345689");
+        owner2.setAddress("523 Chamkar Somroang");
+
+        Pet sreykinPet = new Pet();
+        sreykinPet.setPetType(savedCatType);
+        sreykinPet.setOwner(owner2);
+        sreykinPet.setBirthDate(LocalDate.now());
+        sreykinPet.setName("Meow");
+        owner2.getPets().add(sreykinPet);
         ownerService.save(owner2);
 
         System.out.println("Added Owners...");
