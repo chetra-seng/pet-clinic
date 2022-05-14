@@ -3,6 +3,8 @@ package meow.springframework.petclinic.services.springdatajpa;
 import meow.springframework.petclinic.model.PetType;
 import meow.springframework.petclinic.repositories.PetTypeRepository;
 import meow.springframework.petclinic.services.PetTypeService;
+import org.springframework.context.annotation.Profile;
+import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -10,6 +12,8 @@ import java.util.Set;
 /**
  * Created by chetra_seng on 14/5/22
  */
+@Profile("springdatajpa")
+@Service
 public class PetTypeSDJpaService implements PetTypeService {
     private final PetTypeRepository petTypeRepository;
 
