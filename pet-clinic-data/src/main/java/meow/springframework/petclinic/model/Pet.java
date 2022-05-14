@@ -1,12 +1,24 @@
 package meow.springframework.petclinic.model;
 
+import javax.persistence.*;
 import java.time.LocalDate;
 
+@Entity
+@Table(name = "pets")
 public class Pet extends BaseEntity{
-    private Owner owner;
+    @Column(name = "name")
     private String name;
-    private PetType petType;
+
+    @Column(name = "birth_date")
     private LocalDate birthDate;
+
+    @ManyToOne
+    @JoinColumn(name = "owner_id")
+    private Owner owner;
+
+    @ManyToOne
+    @JoinColumn(name = "type_id")
+    private PetType petType;
 
     public String getName() {
         return name;
