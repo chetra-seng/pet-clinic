@@ -2,12 +2,16 @@ package meow.springframework.petclinic.services.map;
 
 import meow.springframework.petclinic.model.Visit;
 import meow.springframework.petclinic.services.VisitService;
+import org.springframework.context.annotation.Profile;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 /**
  * Created by chetra_seng on 15/5/22
  */
+@Profile({"default", "map"})
+@Service
 public class VisitMapService extends AbstractMapService<Visit, Long> implements VisitService {
     @Override
     public Set<Visit> findAll() {

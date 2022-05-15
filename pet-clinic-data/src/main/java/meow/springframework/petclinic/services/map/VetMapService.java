@@ -4,10 +4,12 @@ import meow.springframework.petclinic.model.Specialty;
 import meow.springframework.petclinic.model.Vet;
 import meow.springframework.petclinic.services.SpecialtiesService;
 import meow.springframework.petclinic.services.VetService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Profile({"default", "map"})
 @Service
 public class VetMapService extends AbstractMapService<Vet, Long> implements VetService {
     private final SpecialtiesService specialtiesService;

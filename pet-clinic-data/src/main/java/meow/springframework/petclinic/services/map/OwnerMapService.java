@@ -5,10 +5,12 @@ import meow.springframework.petclinic.model.Pet;
 import meow.springframework.petclinic.services.OwnerService;
 import meow.springframework.petclinic.services.PetService;
 import meow.springframework.petclinic.services.PetTypeService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Profile({"default", "map"})
 @Service
 public class OwnerMapService extends AbstractMapService<Owner, Long> implements OwnerService {
     private final PetTypeService petTypeService;
