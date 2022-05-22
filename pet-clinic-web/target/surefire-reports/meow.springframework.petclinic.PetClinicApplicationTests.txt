@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: meow.springframework.petclinic.PetClinicApplicationTests
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.021 s - in meow.springframework.petclinic.PetClinicApplicationTests
