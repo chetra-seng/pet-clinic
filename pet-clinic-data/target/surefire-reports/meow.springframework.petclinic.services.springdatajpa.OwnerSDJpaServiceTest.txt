@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: meow.springframework.petclinic.services.springdatajpa.OwnerSDJpaServiceTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.53 s - in meow.springframework.petclinic.services.springdatajpa.OwnerSDJpaServiceTest
